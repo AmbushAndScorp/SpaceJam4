@@ -7,8 +7,8 @@ from typing import Callable
 
 class Spaceship (SphereCollideObject):
     def __init__(self, loader: Loader, modelPath: str, parentNode: NodePath, nodeName: str, texPath: str, posVec: Vec3, scaleVec: float, manager: Task, accept: Callable[[str, Callable], None]):
-        super(Spaceship, self).__init__(loader, modelPath, parentNode, nodeName, Vec3(0,0,0), 5)
-        self.modelNode = loader.loadModel(modelPath)
+        super(Spaceship, self).__init__(loader, modelPath, parentNode, nodeName, Vec3(0,0,0), 1)
+        #self.modelNode = loader.loadModel(modelPath)
         self.render = parentNode
         self.modelNode.reparentTo(parentNode)
         self.accept = accept
