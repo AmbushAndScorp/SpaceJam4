@@ -28,7 +28,7 @@ class myApp(ShowBase):
             # not too sure why X is being weird while Y and Z are working just fine, but it works so
             circSpace += 0.167
         
-        #self.SetCamera()
+        self.SetCamera()
         self.cTrav = CollisionTraverser()
         self.cTrav.traverse(self.render)
         self.pusher = CollisionHandlerPusher()

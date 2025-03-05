@@ -6,7 +6,7 @@ from CollideObjectBase import *
 
 class Universe (InvSphereCollideObject):
     def __init__(self, loader: Loader, modelPath: str, parentNode: NodePath, nodeName: str, texPath: str, scaleVec: float):
-        super(Universe, self).__init__(loader, modelPath, parentNode, nodeName, Vec3(0,0,0), 0.9)
+        super(Universe, self).__init__(loader, modelPath, parentNode, nodeName, Vec3(0,0,0), scaleVec)
         self.modelNode = loader.loadModel(modelPath)
         self.modelNode.reparentTo(parentNode)
         self.modelNode.setScale(scaleVec)
